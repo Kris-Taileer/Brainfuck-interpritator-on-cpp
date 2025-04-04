@@ -4,15 +4,15 @@
 
 using namespace std;
 
-unsigned int pos = 0;
+int pos = 0;
 
 
-void pos_left(int pos) {
+void pos_left(int &pos) {
     if (pos == 0) cout << "Negative mem index\n";
     if (pos != 0) pos--;
 }
 
-void pos_right(int pos) {
+void pos_right(int &pos) {
     pos++;
 }
 
