@@ -10,6 +10,7 @@ int main() {
     string mes;
     while (mes != "0") {
         while (cin >> mes) {
+
             if (mes == "+") {
                 slots[pos].add(pos);
             }
@@ -25,7 +26,12 @@ int main() {
             if (mes == ".") {
                 slots[pos].dot(pos);
             }
+            if (mes == "0") {
+                return 0;
+            }
+            //cout << "pos: " << pos << endl; // corpse of debug
         }
+
     }
 
     return 0;
