@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -18,29 +19,29 @@ void pos_right(int &pos) {
 class Slot {
 private:
     int var;
-    int i;
 public:
     Slot(int _var = 0): var(_var) {}
 
-    void add(int i) {
+    void add() {
         var++;
     }
 
-    void set_var(int i) {
-        int new_var;
-        cin >> new_var;
-        var = new_var;
+    void input_use(queue<char>& input_queue) {
+        if (!input_queue.empty()) {
+            var = input_queue.front();
+            input_queue.pop();
+        }
     }
 
-    int get_var(int i) {
+    int get_var() {
         return var;
     }
 
-    void less(int i) {
+    void less() {
         var--;
     }
 
-    void dot(int i)  {
+    void dot()  {
         char out = var;
         cout << out;
     }
