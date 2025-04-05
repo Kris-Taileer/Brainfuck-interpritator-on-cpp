@@ -6,7 +6,6 @@ using namespace std;
 
 int pos = 0;
 
-
 void pos_left(int &pos) {
     if (pos == 0) cout << "Negative mem index\n";
     if (pos != 0) pos--;
@@ -26,7 +25,13 @@ public:
     void add(int i) {
         var++;
     }
-    
+
+    void set_var(int i) {
+        int new_var;
+        cin >> new_var;
+        var = new_var;
+    }
+
     int get_var(int i) {
         return var;
     }
@@ -36,7 +41,8 @@ public:
     }
 
     void dot(int i)  {
-        cout << var << endl;
+        char out = var;
+        cout << out;
     }
 
     void right()  {
