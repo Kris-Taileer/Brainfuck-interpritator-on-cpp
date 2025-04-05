@@ -8,30 +8,32 @@ using namespace std;
 int main() {
     vector <Slot> slots(1000, 0);
     string mes;
-    while (mes != "0") {
-        while (cin >> mes) {
 
-            if (mes == "+") {
+
+    while (true) {
+        getline(cin, mes);
+        if (mes == "0") { break; }
+        for (char ch : mes) {
+
+            if (ch == '+') {
                 slots[pos].add(pos);
             }
-            if (mes == "-") {
+            if (ch == '-') {
                 slots[pos].less(pos);
             }
-            if (mes == ">") {
+            if (ch == '>') {
                 slots[pos].right();
             }
-            if (mes == "<") {
+            if (ch == '<') {
                 slots[pos].left();
             }
-            if (mes == ".") {
+            if (ch == '.') {
                 slots[pos].dot(pos);
             }
-            if (mes == "0") {
+            if (ch == '0') {
                 return 0;
             }
-            //cout << "pos: " << pos << endl; // corpse of debug
-        }
-
+        }   //cout << "pos: " << pos << endl;
     }
 
     return 0;
