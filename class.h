@@ -26,6 +26,10 @@ public:
     void add(int i) {
         var++;
     }
+    
+    int get_var(int i) {
+        return var;
+    }
 
     void less(int i) {
         var--;
