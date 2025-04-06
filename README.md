@@ -1,2 +1,2 @@
-# Brainfuck-interpritator-on-cpp
-simple interpritator for Bf that was written on cpp
+# Brainfuck-interpreter-on-cpp
+simple interpreter for Bf that was written on cpp
